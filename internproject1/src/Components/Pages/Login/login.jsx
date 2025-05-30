@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import {useNavigate} from "react-router-dom"
 const Login = () => {
   const [formdata, setFormdata] = useState({
     email: "",
     password: ""
   });
+const navigate = useNavigate();
 
   function handleChange(e) {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
@@ -22,6 +23,10 @@ const Login = () => {
     }
 
     toast.success("User logged in!");
+    setTimeout(()=>{
+     navigate('/home')
+    },1000)
+  
   };
 
   return (

@@ -1,0 +1,40 @@
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .product-detail img {
+    height: 400px;
+    width: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+  }
+  
+  .detail-info {
+    margin-top: 0;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
+
+  }
+  
+  .detail-info h2 {
+    margin-bottom: 10px;
+    font-family: 20px;
+  }
+  
+  .detail-info p {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  

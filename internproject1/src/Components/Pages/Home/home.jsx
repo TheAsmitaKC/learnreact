@@ -41,6 +41,7 @@ const Home = () => {
             <img src={product.image} alt={product.title} />
             <p> <strong>{product.title}</strong></p>
             <p><strong>Category:</strong> {product.category}</p>
+            <p><strong>Price:$</strong>{product.price}</p>
             <p>⭐{product.rating?.rate}</p>
           </div>
         ))}

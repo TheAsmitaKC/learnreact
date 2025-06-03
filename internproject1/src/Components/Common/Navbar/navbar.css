@@ -1,13 +1,18 @@
 body{
     margin: 0;
     padding: 0;
+    
 }
 .navbar-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
+  
     font-size: 1.5rem;
+  background-color: rgb(231, 245, 245);
+  padding: 10px;
+  margin-bottom: 10px;
+
   }
   
  
@@ -15,6 +20,16 @@ body{
     display: flex;
     list-style: none;
     gap: 40px;
+  
    
   }
-  
+  .middle-nav li{
+    cursor: pointer;
+  }
+ 
+  .middle-nav a,
+  .right-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }

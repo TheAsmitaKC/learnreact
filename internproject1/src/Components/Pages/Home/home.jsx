@@ -3,6 +3,7 @@ import Navbar from '../../Common/Navbar/navbar'
 import { useNavigate } from 'react-router-dom'
 import '../Home/home.css'
 import Carousel from "../Carousel/carousel"
+import Card from "../Card/card"
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -32,18 +33,11 @@ const Home = () => {
       <h1>List</h1>
       <div className="showlist">
         {products.map((product) => (
-          <div
+          <Card
             key={product.id}
-            className='product'
-            onClick={() => handleClick(product.id)} 
-            style={{ cursor: 'pointer' }}           
-          >
-            <img src={product.image} alt={product.title} />
-            <p> <strong>{product.title}</strong></p>
-            <p><strong>Category:</strong> {product.category}</p>
-            <p><strong>Price:$</strong>{product.price}</p>
-            <p>⭐{product.rating?.rate}</p>
-          </div>
+            product={product}
+            onClick={() => handleClick(product.id)}
+          />
         ))}
       </div>
     </div>

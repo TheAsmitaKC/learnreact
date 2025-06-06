@@ -42,7 +42,7 @@ else{
         <input type="text" placeholder='Enter your email ' name='email' value={formdata.email} onChange={handlechange}/>
         <input type="text"  placeholder='Enter your password' name='password' value={formdata.password} onChange={handlechange}/>
         <button type='submit' >Register</button>
-        <p className='para'>Already have an account ? <a href="/login">Login</a></p>
+        <p className='paralogin'>Already have an account ? <a href="/login">Login</a></p>
         
         </form>
    

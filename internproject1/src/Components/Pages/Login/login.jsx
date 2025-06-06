@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {useNavigate} from "react-router-dom"
+import "../Login/login.css"
 const Login = () => {
   const [formdata, setFormdata] = useState({
     email: "",
@@ -51,8 +52,8 @@ const navigate = useNavigate();
             onChange={handleChange}
             required
           />
-          <button type="submit">Login</button>
-          <p className="para">Don't have an account? <a href="/">Register</a></p>
+          <button className="loginbutton" type="submit">Login</button>
+          <p className="paralogin">Don't have an account? <a href="/">Register</a></p>
         </form>
       </div>
    

@@ -148,23 +148,64 @@
 // }
 
 // export default App
-import React from 'react'
-import { useState } from 'react'
-const Loginstatus=()=>{
-  const [islogin, setlogin]= useState(false);
-  const handlelogin=()=>{
-    setlogin(!islogin)
-  }
-  return <div>
-    <p>{islogin? "You are logged in":"Youare logged out"}</p>
-    <button onClick={handlelogin}>{islogin? "login":"Logout"}</button>
-  </div>
+// import React from 'react'
+// import { useState } from 'react'
+// const Loginstatus=()=>{
+//   const [islogin, setlogin]= useState(false);
+//   const handlelogin=()=>{
+//     setlogin(!islogin)
+//   }
+//   return <div>
+//     <p>{islogin? "You are logged in":"Youare logged out"}</p>
+//     <button onClick={handlelogin}>{islogin? "login":"Logout"}</button>
+//   </div>
 
+// }
+// const App = () => {
+//   return (
+//     <div><Loginstatus/></div>
+//   )
+// }
+
+// export default App
+// import React from 'react';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import Home from "./Home/home"
+// import Login from "./Login/login"
+// const App = () => {
+//   return (
+//     <div>
+//       <BrowserRouter>
+//       <Routes>
+//         <Route path='./home' element={<Home/>}></Route>
+//         <Route path='./login' element={<Login/>}></Route>
+//       </Routes>
+//       </BrowserRouter>
+//     </div>
+//   )
+// }
+
+// export default App
+import React from 'react';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
+
+
+const user =()=>{
+  const {id}= useParams();
+  return <h2>User ID:{id}</h2>
 }
+const Home = () => <h2>Home Page</h2>;
+
 const App = () => {
   return (
-    <div><Loginstatus/></div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+       
+        <Route path='/user/:id' element={user}> </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
